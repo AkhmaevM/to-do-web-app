@@ -1,11 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>to-do</title>
-</head>
-<body>
-    <script src="scripts/script.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>to-do</title>
+    </head>
+    <body>
+        <main>
+            <section class="todo">
+                <div class="todo__wrapper">
+                    <div class="todo__box">
+                        <input type="text" class="todo__input" placeholder="Add a new task">
+                        <button class="todo__btn">+</button>
+                    </div>
+
+                    <div class="todo__list">
+                        <p class="todo__title">Task to do - 4</p>
+
+                        <div class="todo__items">
+                            <div class="todo__item">
+                                <p class="todo__item-text">To study React fundamentals</p>
+                                <div class="todo__btns">
+                                    <button
+                                        class="todo__complete"></button>
+                                    <button
+                                        class="todo__delete"></button>
+                                </div>
+                            </div>
+                            <div class="todo__item">
+                                <p class="todo__item-text">To study React fundamentals</p>
+                                <div class="todo__btns"><button
+                                        class="todo__complete"></button><button
+                                        class="todo__delete"></button></div>
+                            </div>
+                            <div class="todo__item">
+                                <p class="todo__item-text">To study React fundamentals</p>
+                                <div class="todo__btns"><button
+                                        class="todo__complete"></button><button
+                                        class="todo__delete"></button></div>
+                            </div>
+                            <div class="todo__item">
+                                <p class="todo__item-text">To study React fundamentals</p>
+                                <div class="todo__btns"><button
+                                        class="todo__complete"></button><button
+                                        class="todo__delete"></button></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="todo__completed">
+                        <p class="todo__title">Done - 1</p>
+
+                        <div class="todo__items">
+                            <div class="todo__item-completed">To study React fundamentals</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="scripts/script.js"></script>
+    </body>
 </html>
