@@ -63,6 +63,7 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 16px;
+  min-height: 200px;
 }
 .todo__item {
   width: 392px;
@@ -81,6 +82,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   color: #9e78cf;
+  width: 221px;
 }
 .todo__item-completed {
   width: 392px;
