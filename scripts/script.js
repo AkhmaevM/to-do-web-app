@@ -1,6 +1,12 @@
 const userInput = document.querySelector('.todo__input');
 const tasks = document.querySelector('.todo__items');
+const completedTasks = document.querySelector('.todo__items-completed');
 const addTaskBtn = document.querySelector('.todo__btn');
+const currentTasksCount = document.querySelector('.todo__count');
+const completedTasksCount = document.querySelector('.todo__count-completed');
+
+let completeBtn;
+let deleteBtn;
 
 
 addTaskBtn.onclick = ()=>{
@@ -14,11 +20,11 @@ addTaskBtn.onclick = ()=>{
     let btnsBox = document.createElement('div');
     btnsBox.className = 'todo__btns';
 
-    let completeBtn = document.createElement('img');
+    completeBtn = document.createElement('img');
     completeBtn.className = 'todo__complete';
     completeBtn.src = '../img/Complete.svg';
 
-    let deleteBtn = document.createElement('img');
+    deleteBtn = document.createElement('img');
     deleteBtn.className = 'todo__delete';
     deleteBtn.src = '../img/Deleter.svg';
 
@@ -28,4 +34,27 @@ addTaskBtn.onclick = ()=>{
     btnsBox.appendChild(completeBtn);
     btnsBox.appendChild(deleteBtn);
 
+    currentTasksCount.textContent = tasks.childElementCount;
+
+    userInput.value = '';
+
+    if(currentTasksCount.textContent > 0){
+
+
+    completeBtn.addEventListener('click', (e)=>{
+        console.log(e.target.parentElement.parentElement);
+        tasks.removeChild(e.target.parentElement.parentElement);
+        completedTasks.appendChild(e.target.parentElement.parentElement);
+        e.target.parentElement.parentElement.className = 'todo__item-completed';
+        e.target.parentElement.previousElementSibling.className = 'todo__item-completed--text';
+        e.target.parentElement.remove();
+        completedTasksCount.textContent = completedTasks.childElementCount;
+    })
+
+    deleteBtn.addEventListener('click', (e)=>{
+        e.target.parentElement.parentElement.remove();
+    })
 }
+
+}
+

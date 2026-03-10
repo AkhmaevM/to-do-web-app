@@ -65,6 +65,13 @@ body {
   row-gap: 16px;
   min-height: 200px;
 }
+.todo__items-completed {
+  width: 412px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  min-height: 100px;
+}
 .todo__item {
   width: 392px;
   height: 55px;
